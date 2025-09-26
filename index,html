@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PhoneFixx - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<link rel="stylesheet" href="css/style.css">
+
+<body>
+    <header>
+        <h1>PhoneFixx</h1>
+        <p class="tagline">Quick, affordable phone repairs on campus</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="enquiry.html">Enquiry</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <h2>Welcome to PhoneFixx!</h2>
+        <p>We quickly and affordably repair broken screens, poor batteries, and charging ports for students.</p>
+        <p>Weekdays are open.  We welcome walk-ins.  Easy reservation through WhatsApp.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 PhoneFixx | Contact: <a href="mailto:gomolemophenyo@icloud.com">gomolemophenyo@icloud.com</a> | 0670798867</p>
+    </footer>
+</body>
+</html>
