@@ -2,50 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PhoneFixx - Enquiry</title>
+    <meta name="description" content="PhoneFixx: quick and affordable phone repairs on campus — submit an enquiry for services or bookings.">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        main {
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 500px;
+            margin: 10px auto;
+        }
+        input, select, textarea, button {
+            padding: 8px;
+            font-size: 1rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
-<link rel="stylesheet" href="css/style.css">
-
 <body>
-    <header>
-        <h1>PhoneFixx</h1>
-        <p class="tagline">Quick, affordable phone repairs on campus</p>
-    </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="enquiry.html">Enquiry</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<header>
+    <h1>PhoneFixx</h1>
+    <p class="tagline">Quick, affordable phone repairs on campus</p>
+</header>
 
-    <main>
-        <h2>Enquiry Form</h2>
-        <form onsubmit="handleSubmit(event)">
-            <label for="name">Full Name</label>
-            <input id="name" name="name" required>
-            
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required>
-            
-            <label for="type">Enquiry Type</label>
-            <select id="type" name="type">
-                <option>General</option>
-                <option>Booking / Service</option>
-            </select>
-            
-            <label for="msg">Message</label>
-            <textarea id="msg" name="msg" rows="5"></textarea>
-            
-            <button type="submit">Send</button>
-        </form>
-    </main>
+<nav>
+    <a href="business_proposal.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="enquiry.html">Enquiry</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
-    <footer>
-        <p>&copy; 2025 PhoneFixx | Contact: <a href="mailto:gomolemophenyo@icloud.com">gomolemophenyo@icloud.com</a> | 0670798867</p>
-    </footer>
+<main>
+    <h2>Enquiry Form</h2>
+    <form id="enquiryForm" onsubmit="handleSubmit(event)">
+        <label for="e-name">Full Name</label>
+        <input type="text" id="e-name" name="e-name" required minlength="2">
+
+        <label for="e-email">Email</label>
+        <input type="email" id="e-email" name="e-email" required>
+
+        <label for="e-service">Service</label>
+        <select id="e-service" name="e-service" required>
+            <option value="">Select a service</option>
+            <option value="screen">Screen Replacement</option>
+            <option value="battery">Battery Replacement</option>
+            <option value="charging">Charging Port Fix</option>
+            <option value="speaker">Speaker / Mic Clean</option>
+        </select>
+
+        <label for="e-date">Preferred Date</label>
+        <input type="date" id="e-date" name="e-date" required>
+
+        <label for="e-msg">Message</label>
+        <textarea id="e-msg" name="e-msg" rows="4"></textarea>
+
+        <button type="submit">Get Quote</button>
+        <div id="e-result" aria-live="polite" style="margin-top:10px;"></div>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2025 PhoneFixx | Contact: <a href="mailto:gomolemophenyo@icloud.com">gomolemophenyo@icloud.com</a> | 0670798867</p>
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
